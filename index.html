@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Event Manager App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="msapplication-TileImage" content="/icons/mstile-144x144.png">
+    <meta name="theme-color" content="#3867d6">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js', { type: 'module' })
+        .then(registration => {
+          console.log('Service Worker registered successfully:', registration);
+        })
+        .catch(error => {
+          console.log('Service Worker registration failed:', error);
+        });
+    }
+  </script>
+  
+    </head>
+  <body>
+    <!-- ********************************************************************** Header navigation -->
+    <section id="Home">
+      <header class="header">
+        <a href="#" class="logo">Event<span>ova</span></a>
+        <nav class="navbar">
+          <a href="#Home">Home</a>
+          <a href="#Gallery">Gallery</a>
+          <a href="#OurService">Our Service</a>
+          <a href="#AboutUs">About Us</a>
+          <a href="#Pricing">Pricing</a>
+          <div class="animation start-home"></div>
+        </nav>
+        <nav class="sidebar">
+          <a href="#Home">Home</a>
+          <a href="#Gallery">Gallery</a>
+          <a href="#OurService">Our Service</a>
+          <a href="#AboutUs">About Us</a>
+          <a href="#Pricing">Pricing</a>
+          <a onclick=showSidebar() class="menu-bars" class="fas fa-bars"></a>
+          <div class="animation start-home"></div>
+        </nav>
+        <a href="/loginPg/login.html"><button class="button">Login / Sign-Up</button></a>
+      </header>
+    </section>
+    <script>
+      function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display  = 'flex'
+      }
+    </script>
+
+    <!-- ********************************************************************** text below header -->
+
+    <div class="header-text">
+      <section id="Gallery">
+      <h1>Welcome to Event<span>ova</span></h1>
+      <p class="memorableEvents">Your one-stop destination for organizing <span>memorable events!</span></p>
+      <div class="buttons">
+        <a href="gallery/Gallery.html" ><button class="btn">View related images</button></a>
+      </div>
+
+    </div>
+    </section>
+
+
+    <!-- ********************************************************************** Images displaying -->
+    <section>
+
+      <div class="wrapper">
+        <div class="container">
+          <input type="radio" name="slide" id="c1" checked>
+          <label for="c1" class="card">
+            <div class="row">
+              <div class="icon">1</div>
+              <div class="description">
+                <h4>Birthday event</h4>
+                <p>Birthdays overflow with joy and endless activities - let's celebrate!</p>
+              </div>
+            </div>
+          </label>
+          <input type="radio" name="slide" id="c2">
+          <label for="c2" class="card">
+            <div class="row">
+              <div class="icon">2</div>
+              <div class="description">
+                <h4>Entertainment Event</h4>
+                <p>Entertainment event - pure excitement</p>
+              </div>
+            </div>
+          </label>
+          <input type="radio" name="slide" id="c3">
+          <label for="c3" class="card">
+            <div class="row">
+              <div class="icon">3</div>
+              <div class="description">
+                <h4>Farewell Party</h4>
+                <p>Goodbyes and good wishes await!</p>
+              </div>
+            </div>
+          </label>
+          <input type="radio" name="slide" id="c4">
+          <label for="c4" class="card">
+            <div class="row">
+              <div class="icon">4</div>
+              <div class="description">
+                <h4>Party</h4>
+                <p>Parties are a treasure trove of excitement -
+                festive activities</p>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- ********************************************************************** our services -->
+    
+    <section class="service" id="OurService">
+      <h1 class="heading">Our <span>Services</span></h1>
+    
+      <div class="box-container">
+        <div class="box">
+          <i class="fas fa-envelope"></i>
+          <h3>Card Design</h3>
+          <p>
+            Expert card design service: Elevate your brand with stunning designs.
+          </p>
+        </div>
+    
+        <div class="box">
+          <i class="fas fa-photo-video"></i>
+          <h3>Photos and Videos</h3>
+          <p>
+            Capture your moments beautifully with our expert photography and videography services.
+          </p>
+        </div>
+    
+        <div class="box">
+          <i class="fas fa-music"></i>
+          <h3>Entertainment</h3>
+          <p>
+            Unforgettable entertainment experiences tailored just for you.
+          </p>
+        </div>
+    
+        <div class="box">
+          <i class="fas fa-car"></i>
+          <h3>Event Vehicles</h3>
+          <p>
+            Arrive in style with our event vehicle services.
+          </p>
+        </div>
+    
+        <div class="box">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Venue Selection</h3>
+          <p>
+            Discover the ideal venue tailored to your event's needs with our expert selection service.
+          </p>
+        </div>
+    
+        <div class="box">
+          <i class="fas fa-birthday-cake"></i>
+          <h3>Food Catering</h3>
+          <p>
+            Indulge in unforgettable culinary experiences with our food catering service
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ********************************************************************** about section -->
+    <section class="about" id="AboutUs">
+      <fieldset>
+        <legend><h1 class="heading"><span>About</span> Us</h1></legend>
+        <div class="row">
+          <div class="image">
+            <img src="imgs/about us.jpeg" alt="" />
+          </div>
+      
+          <div class="content">
+            <h3>Your occasion deserves Our careful planning</h3>
+            <p>
+              Eventova , as an event management company, we excel in crafting unforgettable events. With creativity and precision, we bring your vision to life, exceeding
+              expectations every time. Partner with us for seamless, unforgettable experiences.
+            </p>
+          </div>
+        </div>
+      </fieldset>
+    </section>
+
+<!-- ********************************************************************** pricing section -->
+    <section id="Pricing">
+
+      <div class="price">
+        <h1 class="heading">Our <span>Pricing</span></h1>
+        <div class="cardContainer">
+          <div class="price-card">
+            <div class="price-wrapper">
+              <div class="info">
+                <div>
+                  <b>Basic Package</b>
+                  <p>Basic</p>
+                </div>
+              </div>
+        
+              <div class="text">
+                <p>Ideal for small-scale events such as birthday, anniversary or small gathering.</p>
+              </div>
+        
+              <div class="details">
+                <p><span class="bold">$500 - $1000 </span></p>
+                <b>What's included</b>
+                <ul>
+                  <li>Venue selection</li>
+                  <li>Basic decor</li>
+                  <li>Vendor coordination</li>
+                  <li>On-site management</li>
+        
+                </ul>
+              </div>
+              <button>Get Details</button>
+        
+            </div>
+          </div>
+        
+          <div class="price-card">
+            <div class="price-wrapper">
+              <div class="info">
+                <div>
+                  <b>Standard Package</b>
+                  <p>Standard</p>
+                </div>
+              </div>
+        
+              <div class="text">
+                <p>Suitable for medium-sized events such as weddings, conferences, or company retreats.</p>
+              </div>
+        
+              <div class="details">
+                <p><span class="bold">$1000 - $2000</span></p>
+                <b>What's included</b>
+                <ul>
+                  <li>detailed event planning</li>
+                  <li>theme & decor</li>
+                  <li>Food & entertainment</li>
+                  <li>guest management </li>
+        
+                </ul>
+              </div>
+              <button>Get Details</button>
+        
+            </div>
+          </div>
+        
+          <div class="price-card">
+            <div class="price-wrapper">
+              <div class="info">
+                <div>
+                  <b>Premium Package</b>
+                  <p>Premium</p>
+                </div>
+              </div>
+        
+              <div class="text">
+                <p>Designed for large-scale events such as corporate galas, product launches, or high-end weddings.</p>
+              </div>
+        
+              <div class="details">
+                <p><span class="bold">$5000 - $10000</span></p>
+                <b>What's included</b>
+                <ul>
+                  <li>All services requested</li>
+                  <li>Everything for audience</li>
+                  <li>crew support & security</li>
+                  <li>Stay and more</li>
+        
+                </ul>
+              </div>
+              <button>Get Details</button>
+        
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ********************************************************* footer section starts  -->
+    <div class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>branches</h3>
+          <a> <i class="fas fa-map-marker-alt"></i> London, Ontario </a>
+          <a> <i class="fas fa-map-marker-alt"></i> Chatham, Ontario </a>
+          <a> <i class="fas fa-map-marker-alt"></i> Windsor, Ontario </a>
+          <a> <i class="fas fa-map-marker-alt"></i> Kitchener, Ontario </a>
+          <a> <i class="fas fa-map-marker-alt"></i> Toronto, Ontario </a>
+        </div>
+    
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="#Home"> <i class="fas fa-arrow-right"></i> Home </a>
+          <a href="#Gallery"> <i class="fas fa-arrow-right"></i> Gallery </a>
+          <a href="#OurService"> <i class="fas fa-arrow-right"></i> Our Service </a>
+          <a href="#AboutUs"> <i class="fas fa-arrow-right"></i> About us </a>
+          <a href="#Pricing"> <i class="fas fa-arrow-right"></i> Pricing </a>
+        </div>
+    
+        <div class="box">
+          <h3>contact info</h3>
+          <a> <i class="fas fa-phone"></i> +123-456-7890 </a>
+          <a> <i class="fas fa-phone"></i> +123-456-7890 </a>
+          <a> <i class="fas fa-envelope"></i> Eventova@gmail.com </a>
+          <a> <i class="fas fa-envelope"></i> Eventova@gmail.com </a>
+          <a>
+            <i class="fas fa-map-marker-alt"></i> london, Ontario - N5Z 4V1
+          </a>
+        </div>
+    
+        <div class="box">
+          <h3>follow us</h3>
+          <a> <i class="fab fa-facebook-f"></i> facebook </a>
+          <a> <i class="fab fa-twitter"></i> twitter </a>
+          <a> <i class="fab fa-instagram"></i> instagram </a>
+          <a> <i class="fab fa-linkedin-in"></i> linkedin </a>
+        </div>
+      </div>
+    
+      <div class="credit">
+        created by <span>arulSajeev & MufeedMuneer</span> | all rights reserved
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
